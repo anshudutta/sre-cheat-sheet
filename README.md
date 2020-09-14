@@ -19,7 +19,7 @@ An error budget is 1 minus the SLO of the service. A 99.9% SLO service has a 0.1
 
 If our service receives 1,000,000 requests in four weeks, a 99.9% availability SLO gives us a budget of 1,000 errors over that period.
 
-### Example
+#### Example
 ---
 28 day error budget
 - 99.9% = 40 min (Enough time for humans to react)
@@ -29,8 +29,44 @@ Else make sure change propagates gradually so not all parts of system
 are exposed to change at once giving time for human intervention)
 - 99.999% = 24 seconds (Restricting the rate of change so that only 1% of system changes at a given point in time)
 
+### Reliability
+Reliability is a measure of how well the service lives up to its expectations
+Principles of reliability
+  - What to promise and to whom?
+  - What metrics to measure?
+  - How much reliability is good enough?
+  
+In real world, Reliability of a service is quantified by measuring few paarmeters which are called SLI
+
+### Measuring Reliability
+How is reliability measured?
+### SLA
+Any company providing a service need to have Service Level Agreements, or SLAs. These are your agreements that you make with your customers about the reliability of your service. An SLA has to have consequences if it's violated, otherwise there's no point in making one. If your customers are paying for something and you violate an SLA, there needs to be consequences, such as giving your customers partial refunds or extra service credits.
+
+if you are only alerted of issues after they violated your SLA, that could be a very costly service to run. Therefore, it is in your best interest to catch an issue before it breaches your SLA so that you have time to fix it. These thresholds are your SLOs, service level objectives. They should always be stronger than your SLAs because customers are usually impacted before the SLA is actually breached. And violating SLAs requires costly compensation. 
+
+### SLO
+An SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI.
+They are a fundamental tool in helping your organization strike a good balance between releasing new features and staying reliable for your users. 
+They also help your teams communicate on the expectations of a service through objective data.
+Questions that SLO help answer:
+- If reliability is a feature, when do you prioritize it versus other features?
+- How fast is too tast for rolling out features?
+- What is the right level of reliability for your system?
+  
+A service level objective usi=ually defines a target level for SLI
+```
+lower bound ≤ SLI ≤ upper bound
+```
+#### The happiness Test
+The test states that services need target SLOs that capture the performance and availability levels that if barely met would keep a typical customer happy. Simply put, if your service is performing exactly at its target SLOs, your average user would be happy with that performance. If it were any less reliable, you'd no longer be meeting their expectations and they would become unhappy. If your service meets target SLO, that means you have happy customers. If it misses the target SLO, that means you have sad customers. 
+
 ### SLI
 An SLI is a service level indicator—a carefully defined quantitative measure of some aspect of the level of service that is provided.
+Simply,
+```
+SLI = good events / valid events
+```
 - Request Latency
 - Error Rate = (500 responses/total requestes) per second
 - Availability = uptime / (uptime + downtime)
@@ -40,9 +76,7 @@ An SLI is a service level indicator—a carefully defined quantitative measure o
 Examples
 
 - User-facing serving systems - availability, latency, and throughput.
-
 - Storage systems - latency, availability, and durability
-
 - Big data systems - throughput and end-to-end latency
 
 ```
@@ -54,27 +88,7 @@ availabilities of 99% and 99.999% can be referred to as "2 nines" and "5 nines" 
 and the current published target for Google Compute Engine availability is “three and a half nines”—99.95% availability.
 ```
 
-### SLO
-An SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI.
-They are a fundamental tool in helping your organization strike a good balance between releasing new features and staying reliable for your users. 
-They also help your teams communicate on the expectations of a service through objective data.
-Questions that SLO help answer:
-- If reliability is a feature, when do you prioritize it versus other features?
-- How fast is too tast for rolling out features?
-- What is the right level of reliability for your system?
-  Desired Reliability principles
-  - What to promise and to whom?
-  - What metrics to measure?
-  - How much reliability is good enough?
-  
-```
-lower bound ≤ SLI ≤ upper bound
-```
-#### The happiness Test
-The test states that services need target SLOs that capture the performance and availability levels that if barely met would keep a typical customer happy. Simply put, if your service is performing exactly at its target SLOs, your average user would be happy with that performance. If it were any less reliable, you'd no longer be meeting their expectations and they would become unhappy. If your service meets target SLO, that means you have happy customers. If it misses the target SLO, that means you have sad customers. 
 
-### SLA
-Any company providing a service need to have Service Level Agreements, or SLAs. These are your agreements that you make with your customers about the reliability of your service. An SLA has to have consequences if it's violated, otherwise there's no point in making one. If your customers are paying for something and you violate an SLA, there needs to be consequences, such as giving your customers partial refunds or extra service credits.
 
-if you are only alerted of issues after they violated your SLA, that could be a very costly service to run. Therefore, it is in your best interest to catch an issue before it breaches your SLA so that you have time to fix it. These thresholds are your SLOs, service level objectives. They should always be stronger than your SLAs because customers are usually impacted before the SLA is actually breached. And violating SLAs requires costly compensation. 
+
 
