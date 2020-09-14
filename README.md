@@ -73,11 +73,6 @@ availabilities of 99% and 99.999% can be referred to as "2 nines" and "5 nines" 
 and the current published target for Google Compute Engine availability is “three and a half nines”—99.95% availability.
 ```
 
-### SLA
-Any company providing a service need to have Service Level Agreements, or SLAs. These are your agreements that you make with your customers about the reliability of your service. An SLA has to have consequences if it's violated, otherwise there's no point in making one. If your customers are paying for something and you violate an SLA, there needs to be consequences, such as giving your customers partial refunds or extra service credits.
-
-if you are only alerted of issues after they violated your SLA, that could be a very costly service to run. Therefore, it is in your best interest to catch an issue before it breaches your SLA so that you have time to fix it. These thresholds are your SLOs, service level objectives. They should always be stronger than your SLAs because customers are usually impacted before the SLA is actually breached. And violating SLAs requires costly compensation. 
-
 ### SLO
 An SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI.
 They are a fundamental tool in helping your organization strike a good balance between releasing new features and staying reliable for your users. 
@@ -118,7 +113,14 @@ If it were any less reliable, you'd no longer be meeting their expectations and 
 If your service meets target SLO, that means you have happy customers. If it misses the target SLO, that means you have sad customers. 
 
 
+### SLA
+Any company providing a service need to have Service Level Agreements, or SLAs. These are your agreements that you make with your customers about the reliability of your service. An SLA has to have consequences if it's violated, otherwise there's no point in making one. If your customers are paying for something and you violate an SLA, there needs to be consequences, such as giving your customers partial refunds or extra service credits.
 
+if you are only alerted of issues after they violated your SLA, that could be a very costly service to run. Therefore, it is in your best interest to catch an issue before it breaches your SLA so that you have time to fix it. These thresholds are your SLOs, service level objectives. They should always be stronger than your SLAs because customers are usually impacted before the SLA is actually breached. And violating SLAs requires costly compensation. 
 
+```
+|---------------|--------|-----------
+            :) SLO  :(  SLI  Penalty
+```
 
 
