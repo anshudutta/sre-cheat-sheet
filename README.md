@@ -58,7 +58,7 @@ Questions that SLO help answer:
   
 A service level objective usually defines a target level for SLI so that one can continue to provide a reliable service
 ```
-lower bound ≤ SLI ≤ upper bound
+lower bound ≤ SLI ≤ upper bound --> for a defined period of time
 ```
 #### The happiness Test
 The test states that services need target SLOs that capture the performance and availability levels that if barely met would keep a typical customer happy. 
