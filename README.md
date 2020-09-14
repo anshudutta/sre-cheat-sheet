@@ -30,7 +30,8 @@ are exposed to change at once giving time for human intervention)
 - 99.999% = 24 seconds (Restricting the rate of change so that only 1% of system changes at a given point in time)
 
 ### Reliability
-Reliability is a measure of how well the service lives up to its expectations
+Reliability is a measure of how well the service lives up to its expectations.
+
 Principles of reliability
   - What to promise and to whom?
   - What metrics to measure?
