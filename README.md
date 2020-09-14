@@ -10,15 +10,6 @@
  
 Note: Taking reliaility to extreme measures is unproductiove and costly. It should be "Reliable Enough"
 
-### Error budget
-Error budgets are the tool SRE uses to balance service reliability with the pace of innovation. Changes are a major source of instability, 
-representing roughly 70% of our outages, and development work for features competes with development work for stability. 
-The error budget forms a control mechanism for diverting attention to stability as needed.
-
-An error budget is 1 minus the SLO of the service. A 99.9% SLO service has a 0.1% error budget.
-
-If our service receives 1,000,000 requests in four weeks, a 99.9% availability SLO gives us a budget of 1,000 errors over that period.
-
 #### Example
 ---
 28 day error budget
@@ -46,7 +37,7 @@ NOTE:
 
 ### Measuring Reliability
 How is reliability measured?
-### SLI
+#### SLI
 An SLI is a service level indicator — a carefully defined quantitative measure of some aspect of the level of service that is provided.
 Simply,
 ```
@@ -72,8 +63,7 @@ For example,
 availabilities of 99% and 99.999% can be referred to as "2 nines" and "5 nines" availability, respectively, 
 and the current published target for Google Compute Engine availability is “three and a half nines”—99.95% availability.
 ```
-
-### SLO
+#### SLO
 An SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI.
 They are a fundamental tool in helping your organization strike a good balance between releasing new features and staying reliable for your users. 
 They also help your teams communicate on the expectations of a service through objective data.
@@ -112,15 +102,14 @@ SLO Targets
 1. Just high enough to keep customers happy
 2. Ambitious but achievable
  
-#### The happiness Test
+##### The happiness Test
 The test states that services need target SLOs that capture the performance and availability levels that if barely met would keep a typical customer happy. 
 Simply put, if your service is performing exactly at its target SLOs, your average user would be happy with that performance. 
 If it were any less reliable, you'd no longer be meeting their expectations and they would become unhappy. 
 
 If your service meets target SLO, that means you have happy customers. If it misses the target SLO, that means you have sad customers. 
 
-
-### SLA
+#### SLA
 Any company providing a service need to have Service Level Agreements, or SLAs. These are your agreements that you make with your customers about the reliability of your service. An SLA has to have consequences if it's violated, otherwise there's no point in making one. If your customers are paying for something and you violate an SLA, there needs to be consequences, such as giving your customers partial refunds or extra service credits.
 
 if you are only alerted of issues after they violated your SLA, that could be a very costly service to run. Therefore, it is in your best interest to catch an issue before it breaches your SLA so that you have time to fix it. These thresholds are your SLOs, service level objectives. They should always be stronger than your SLAs because customers are usually impacted before the SLA is actually breached. And violating SLAs requires costly compensation. 
@@ -133,3 +122,31 @@ An SLA
 - Must have consequences if violated
 - Is an agreement with your customer about reliability of your service
 
+### Error budget
+Error budget is a measure of service unreliability that is allowed without breaking SLOs or how much down time is allowed before you have unhappy customers
+Error budget hepls you figure out how room we have for mistakes that can make service unreliable.
+
+Error budgets are the tool SRE uses to balance service reliability with the pace of innovation. Changes are a major source of instability, representing roughly 70% of our outages, and development work for features competes with development work for stability. 
+The error budget forms a control mechanism for diverting attention to stability as needed.
+
+```
+Error Budget = 1 - SLO
+```
+Example
+---
+A 99.9% SLO service has a 0.1% error budget. 
+If the service receives 1,000,000 requests in four weeks, a 99.9% availability SLO gives us a budget of 1,000 errors over that period.
+```
+Downtime = 0.001*28*24*60 minutes = 40.32 minutes
+```
+This is just about enough time for 
+- your monitoring systems to surface an issue, 
+- a human to investigate and fix it. 
+And that only allows for one incident per month
+
+This unavailability can be generated as a result of bad pushes by the product teams, planned maintenance, hardware failures,etc.
+
+#### Benefits
+- Common incentives for Devs and ARE
+- Dev team can self manage risk
+- Unrealistic goals become unattractive
