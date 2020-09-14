@@ -87,6 +87,9 @@ A service level objective usually defines a target level for SLI so that one can
 ```
 lower bound ≤ SLI ≤ upper bound --> for a defined period of time
 ```
+An SLO
+- Should be stronger than your SLA to catch issues before they violate customer expectations
+- Is an internal promises to meet customer expectations
 
 NOTE:
 1. Defining `SLO` is an iterative process, needs to be reviewd periodically based on changing business needs and customers
@@ -126,5 +129,7 @@ if you are only alerted of issues after they violated your SLA, that could be a 
 |---------------|--------|-----------
             :) SLO  :(  SLI  Penalty
 ```
-
+An SLA
+- Must have consequences if violated
+- Is an agreement with your customer about reliability of your service
 
