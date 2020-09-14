@@ -104,6 +104,10 @@ Examples
  - Four 1 hour outages
  - Constant rate of 0.5% errors
 3. Not all users care about latency the same way. Bots may require lower latency than humans. So its resonable to have different SLOs based on different users
+
+SLO Targets
+1. Just high enough to keep customers happy
+2. Ambitious but achievable
  
 #### The happiness Test
 The test states that services need target SLOs that capture the performance and availability levels that if barely met would keep a typical customer happy. 
