@@ -134,7 +134,8 @@ Error Budget = 1 - SLO
 ```
 Example
 ---
-A 99.9% SLO service has a 0.1% error budget. 
+A 99.9% SLO service has a 0.1% error budget.
+
 If the service receives 1,000,000 requests in four weeks, a 99.9% availability SLO gives us a budget of 1,000 errors over that period.
 ```
 Downtime = 0.001*28*24*60 minutes = 40.32 minutes
@@ -142,6 +143,7 @@ Downtime = 0.001*28*24*60 minutes = 40.32 minutes
 This is just about enough time for 
 - your monitoring systems to surface an issue, 
 - a human to investigate and fix it. 
+
 And that only allows for one incident per month
 
 This unavailability can be generated as a result of bad pushes by the product teams, planned maintenance, hardware failures,etc.
