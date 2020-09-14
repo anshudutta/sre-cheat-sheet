@@ -50,20 +50,25 @@ if you are only alerted of issues after they violated your SLA, that could be a 
 An SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI.
 They are a fundamental tool in helping your organization strike a good balance between releasing new features and staying reliable for your users. 
 They also help your teams communicate on the expectations of a service through objective data.
+
 Questions that SLO help answer:
 - If reliability is a feature, when do you prioritize it versus other features?
 - How fast is too tast for rolling out features?
 - What is the right level of reliability for your system?
   
-A service level objective usi=ually defines a target level for SLI
+A service level objective usually defines a target level for SLI so that one can continue to provide a reliable service
 ```
 lower bound ≤ SLI ≤ upper bound
 ```
 #### The happiness Test
-The test states that services need target SLOs that capture the performance and availability levels that if barely met would keep a typical customer happy. Simply put, if your service is performing exactly at its target SLOs, your average user would be happy with that performance. If it were any less reliable, you'd no longer be meeting their expectations and they would become unhappy. If your service meets target SLO, that means you have happy customers. If it misses the target SLO, that means you have sad customers. 
+The test states that services need target SLOs that capture the performance and availability levels that if barely met would keep a typical customer happy. 
+Simply put, if your service is performing exactly at its target SLOs, your average user would be happy with that performance. 
+If it were any less reliable, you'd no longer be meeting their expectations and they would become unhappy. 
+
+If your service meets target SLO, that means you have happy customers. If it misses the target SLO, that means you have sad customers. 
 
 ### SLI
-An SLI is a service level indicator—a carefully defined quantitative measure of some aspect of the level of service that is provided.
+An SLI is a service level indicator — a carefully defined quantitative measure of some aspect of the level of service that is provided.
 Simply,
 ```
 SLI = good events / valid events
