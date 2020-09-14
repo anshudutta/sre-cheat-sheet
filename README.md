@@ -55,11 +55,18 @@ and the current published target for Google Compute Engine availability is “th
 ```
 
 ### SLO
-An SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI
+An SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI.
+They are a fundamental tool in helping your organization strike a good balance between releasing new features and staying reliable for your users. 
+They also help your teams communicate on the expectations of a service through objective data.
 Questions that SLO help answer:
 - If reliability is a feature, when do you prioritize it versus other features?
 - How fast is too tast for rolling out features?
 - What is the right level of reliability for your system?
+  Desired Reliability principles
+  - What to promise and to whom?
+  - What metrics to measure?
+  - How much reliability is good enough?
+  
 ```
 lower bound ≤ SLI ≤ upper bound
 ```
