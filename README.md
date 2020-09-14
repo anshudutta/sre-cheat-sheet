@@ -71,3 +71,5 @@ Questions that SLO help answer:
 lower bound ≤ SLI ≤ upper bound
 ```
 
+### SLI
+Any company providing a service need to have Service Level Agreements, or SLAs. These are your agreements that you make with your customers about the reliability of your service. An SLA has to have consequences if it's violated, otherwise there's no point in making one. If your customers are paying for something and you violate an SLA, there needs to be consequences, such as giving your customers partial refunds or extra service credits.
