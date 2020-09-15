@@ -152,3 +152,12 @@ This unavailability can be generated as a result of bad pushes by the product te
 - Common incentives for Devs and ARE
 - Dev team can self manage risk
 - Unrealistic goals become unattractive
+
+If Servive < Error Budget
+ - Dev can push changes more frequently
+ - SRE can proactively work on increasing reliability
+ 
+If Service > Error Budget
+ - Changes need to be stopped till the system is stable
+ 
+One simple approach is to keep releasing features till error budget is exhausted, then focussing development on reliability improvements untill the budget is refilled
