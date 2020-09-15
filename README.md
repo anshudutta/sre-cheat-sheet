@@ -37,15 +37,15 @@ NOTE:
 
 #### How to make services reliable?
 1. Rolling out changes gradually
- - Deployment with incremental changes
- - Feature toggles
- - Canary deployments with easy rollback that affect only a smaller percent of users initially
+  - Deployment with incremental changes
+  - Feature toggles
+  - Canary deployments with easy rollback that affect only a smaller percent of users initially
 2. Remove single point of failure
- - Multi AZ deployments
- - Set up DR in a geographically isolated region
+  - Multi AZ deployments
+  - Set up DR in a geographically isolated region
 3. Resolution speed
- - Improve TTD and TTR for better reliability
- - Reduce TTF / TBF - Expected frequency of failure to occur
+  - Improve TTD and TTR for better reliability
+  - Reduce TTF / TBF - Expected frequency of failure to occur
  ```
  |------------|---------------|
  Issue       TTD             TTR
