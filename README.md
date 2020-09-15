@@ -53,7 +53,7 @@ NOTE:
 ##### Increase TTF / TBF - Expected frequency of failure to 
   - Make services Fault tolerant by running them on multiple AZs
   - Automate manual mitigation steps
-##### Operations
+##### Inprove Operation Efficiency
   - Post mortems of outages
   - Standardized Infrastructure 
   - Collect data on poor reliability regions and make extra effort to make those reliable
