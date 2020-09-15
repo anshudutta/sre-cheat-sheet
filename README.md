@@ -36,24 +36,24 @@ NOTE:
 3. Have ambitions but achievable targets based on how it performs and agreed by all stakeholders
 
 #### How to make services reliable?
-1. Rolling out changes gradually
+##### Rolling out changes gradually
   - Deployment with incremental changes
   - Feature toggles
   - Canary deployments with easy rollback that affect only a smaller percent of users initially
-2. Remove single point of failure
+##### Remove single point of failure
   - Multi AZ deployments
   - Set up DR in a geographically isolated region
-3. Reduce TTD (Time-To-Detect)
+##### Reduce TTD (Time-To-Detect)
   - Catch issues faster by automated alert and monitoring 
   - Monitor SLO compliance and error budget burnout
-4. Reduce TTR (Time-To-Resolution)
+##### Reduce TTR (Time-To-Resolution)
   - Fix outgages quicker
   - Knowledge sharing via playbooks
-  - Automating outage mitigation steps, such as draining from one zone to another.
-5. Increase TTF / TBF - Expected frequency of failure to 
+  - Automating outage mitigation steps, such as draining from one region to another.
+##### Increase TTF / TBF - Expected frequency of failure to 
   - Make services Fault tolerant by running them on multiple AZs
   - Automate manual mitigation steps
-6. Operations
+##### Operations
   - Post mortems of outages
   - Standardized Infrastructure 
   - Collect data on poor reliability regions and make extra effort to make those reliable
