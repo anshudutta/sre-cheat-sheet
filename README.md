@@ -48,11 +48,15 @@ NOTE:
   - Monitor SLO compliance and error budget burnout
 4. Reduce TTR (Time-To-Resolution)
   - Fix outgages quicker
-  - Knowledge sharing
-  - Drain a zone and redirect traffic to a healthy server
+  - Knowledge sharing via playbooks
+  - Automating outage mitigation steps, such as draining from one zone to another.
 5. Increase TTF / TBF - Expected frequency of failure to 
   - Make services Fault tolerant by running them on multiple AZs
-  
+  - Automate manual mitigation steps
+6. Operations
+  - Post mortems of outages
+  - Standardized Infrastructure 
+  - Collect data on poor reliability regions and make extra effort to make those reliable
  ```
  |------------|---------------|
  Issue       TTD             TTR
