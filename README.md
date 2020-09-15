@@ -8,18 +8,6 @@
  - operations = 99.99%
  - business = 99.999%
  
-Note: Taking reliaility to extreme measures is unproductiove and costly. It should be "Reliable Enough"
-
-#### Example
----
-28 day error budget
-- 99.9% = 40 min (Enough time for humans to react)
-- 99.99% = 4 minutes 
-(Incident responses have to be automated. 
-Else make sure change propagates gradually so not all parts of system 
-are exposed to change at once giving time for human intervention)
-- 99.999% = 24 seconds (Restricting the rate of change so that only 1% of system changes at a given point in time)
-
 ### Reliability
 Reliability is a measure of how well the service lives up to its expectations.
 
@@ -34,7 +22,7 @@ In real world, Reliability of a service is quantified by measuring few parmeters
 1. 100% Reliability is a wrong target. If you are running your service more reliably than you need to, you may be slowing down development
 2. Its more expensive to make already reliable services more reliable. At some point the incremental cost of making a service reliable increases exponentially
 3. Have ambitions but achievable targets based on how it performs and agreed by all stakeholders
-
+4. Taking reliaility to extreme measures is unproductiove and costly. It should be "Reliable Enough"
 #### How to make services reliable?
 ##### Rolling out changes gradually
   - Deployment with incremental changes
@@ -165,6 +153,16 @@ The error budget forms a control mechanism for diverting attention to stability 
 ```
 Error Budget = 1 - SLO
 ```
+#### Illustration
+---
+28 day error budget
+- 99.9% = 40 min (Enough time for humans to react)
+- 99.99% = 4 minutes 
+(Incident responses have to be automated. 
+Else make sure change propagates gradually so not all parts of system 
+are exposed to change at once giving time for human intervention)
+- 99.999% = 24 seconds (Restricting the rate of change so that only 1% of system changes at a given point in time)
+
 Example
 ---
 A 99.9% SLO service has a 0.1% error budget.
