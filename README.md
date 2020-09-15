@@ -30,7 +30,7 @@ Principles of reliability
   
 In real world, Reliability of a service is quantified by measuring few parmeters which are called `SLI`
 
-NOTE: 
+#### NOTE: 
 1. 100% Reliability is a wrong target. If you are running your service more reliably than you need to, you may be slowing down development
 2. Its more expensive to make already reliable services more reliable. At some point the incremental cost of making a service reliable increases exponentially
 3. Have ambitions but achievable targets based on how it performs and agreed by all stakeholders
