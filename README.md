@@ -43,9 +43,16 @@ NOTE:
 2. Remove single point of failure
   - Multi AZ deployments
   - Set up DR in a geographically isolated region
-3. Resolution speed
-  - Improve TTD and TTR for better reliability
-  - Reduce TTF / TBF - Expected frequency of failure to occur
+3. Reduce TTD (Time-To-Detect)
+  - Catch issues faster by automated alert and monitoring 
+  - Monitor SLO compliance and error budget burnout
+4. Reduce TTR (Time-To-Resolution)
+  - Fix outgages quicker
+  - Knowledge sharing
+  - Drain a zone and redirect traffic to a healthy server
+5. Increase TTF / TBF - Expected frequency of failure to 
+  - Make services Fault tolerant by running them on multiple AZs
+  
  ```
  |------------|---------------|
  Issue       TTD             TTR
@@ -55,7 +62,6 @@ NOTE:
  ```
  E ~ (TTR+TTD) * impact % / TTF
  ```
-
 
 ### Measuring Reliability
 How is reliability measured?
