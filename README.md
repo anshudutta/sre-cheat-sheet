@@ -111,7 +111,7 @@ An SLO is a service level objective: a target value or range of values for a ser
 They are a fundamental tool in helping your organization strike a good balance between releasing new features and staying reliable for your users. 
 They also help your teams communicate on the expectations of a service through objective data.
 
-Questions that SLO help answer:
+##### Questions that SLO help answer:
 - If reliability is a feature, when do you prioritize it versus other features?
 - How fast is too tast for rolling out features?
 - What is the right level of reliability for your system?
@@ -120,11 +120,11 @@ A service level objective usually defines a target level for SLI so that one can
 ```
 lower bound ≤ SLI ≤ upper bound --> for a defined period of time
 ```
-An SLO
+##### An SLO
 - Should be stronger than your SLA to catch issues before they violate customer expectations
 - Is an internal promises to meet customer expectations
 
-NOTE:
+##### NOTE:
 1. Defining `SLO` is an iterative process, needs to be reviewd periodically based on changing business needs and customers
 ```
 |-----------|-----------------|
@@ -132,8 +132,7 @@ Initial   Follow up          Periodic
 ```
 2. Edge Cases
 Not everything is linear, there are many edge cases in different organizations that don't conform to a single SLO for everything.
-Examples
----
+###### Example
 1. Companies might shift from 3 9s to 4 9s during black friday shopping frenzy to cater to high demands
 2. Outage duration can impact customer happiness. The follwing may affect different customers differently
  - A single 4 hour outage
