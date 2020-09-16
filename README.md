@@ -63,24 +63,35 @@ Simply,
 ```
 SLI = good events / valid events
 ```
+##### Characteristics of good SLI
+- Must have a predictable liner realationship with user happiness (Less variance) 
+![alt text](https://github.com/anshudutta/sre-cheat-sheet/blob/master/SLI-Metric.png)
+- Shows service is working as users expect it to
+- Aggregated over a long time horizon
+
+##### Ways of measuring SLI
+- Requst Logs
+- Exporting metrics
+- Front-end load balancer metrics
+- Synthetic clients
+- Client side instrumentation
+
+##### Types of SLI
 - Request Latency
 - Error Rate = (500 responses/total requestes) per second
 - Time between Failures - Frequency of error occurring over a period of time
 - Availability = uptime / (uptime + downtime)
 - Durability (Data will be retained over a period of time, measure of data loss)
 
----
-Examples
-
-- User-facing serving systems - availability, latency, and throughput.
+##### Examples
+- Request-Response systems
+   - Availability - Proportion of valid requests served successfully
+   - Latency - Proportion of valid requests served faster than a threshold
+   - Quality - Proportion of valid requests served without degrading quality
 - Storage systems - latency, availability, and durability
 - Big data systems - throughput and end-to-end latency
 
-Characteristics of good SLI?
-- Must have a predictable liner realationship with user happiness (Less variance) 
-![alt text](https://github.com/anshudutta/sre-cheat-sheet/blob/master/SLI-Metric.png)
-- Shows service is working as users expect it to
-- Aggregated over a long time horizon
+
 
 ```
 Although 100% availability is impossible, near-100% availability is often readily achievable, 
