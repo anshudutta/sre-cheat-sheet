@@ -77,16 +77,8 @@ Examples
 - Big data systems - throughput and end-to-end latency
 
 Characteristics of good SLI?
-- Must have a predictable liner realationship with user happiness (Less variance)
-  ![alt text](https://github.com/anshudutta/sre-cheat-sheet/blob/master/SLI-Metric.png)
-```
-|                                   |
-|------|           |----            |~~~~~~~      |--------
-|      |           |                |       $~~~~~~|
-|      |-----------|                |
------------------------->           |------------------------> time
-GOOD                                 
-```
+- Must have a predictable liner realationship with user happiness (Less variance) ![alt text](https://github.com/anshudutta/sre-cheat-sheet/blob/master/SLI-Metric.png)
+
 - Shows service is working as users expect it to
 - Aggregated over a long time horizon
 
