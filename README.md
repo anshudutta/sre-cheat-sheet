@@ -96,6 +96,15 @@ SLI = good events / valid events
  - Coverage - Proprotion of valid data processed successfully
  - Thorughput - Proportion of time where the data processing rate is faster than threshold
 
+##### Managing complex systems
+- Start by thinking about user journeys
+- SLI and metrics are different. SLI ---> Something is broken, Metric ---> What is broken
+- Keep the number of SLIs down to 1-3 per user journey
+- Not all metrics make good SLI
+- Higher number of SLIs increase load on operations
+- Higher signal to noise ratio as they tend to give conflicting signals
+- Aggregate similar user journeys to keep the number of SLIs down
+
 ```
 Although 100% availability is impossible, near-100% availability is often readily achievable, 
 and the industry commonly expresses high-availability values in terms of the number of "nines" 
