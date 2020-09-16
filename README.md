@@ -132,15 +132,16 @@ Initial   Follow up          Periodic
 ```
 2. Edge Cases
 Not everything is linear, there are many edge cases in different organizations that don't conform to a single SLO for everything.
-###### Example
+```
+Example
 1. Companies might shift from 3 9s to 4 9s during black friday shopping frenzy to cater to high demands
 2. Outage duration can impact customer happiness. The follwing may affect different customers differently
- - A single 4 hour outage
- - Four 1 hour outages
- - Constant rate of 0.5% errors
+    - A single 4 hour outage
+    - Four 1 hour outages
+    - Constant rate of 0.5% errors
 3. Not all users care about latency the same way. Bots may require lower latency than humans. So its resonable to have different SLOs based on different users
-
-SLO Targets
+```
+##### SLO Targets
 1. Just high enough to keep customers happy
 2. Ambitious but achievable
  
