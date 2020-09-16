@@ -23,6 +23,7 @@ In real world, Reliability of a service is quantified by measuring few parmeters
 2. Its more expensive to make already reliable services more reliable. At some point the incremental cost of making a service reliable increases exponentially
 3. Have ambitions but achievable targets based on how it performs and agreed by all stakeholders
 4. Taking reliaility to extreme measures is unproductiove and costly. It should be "Reliable Enough"
+
 #### How to make services reliable?
 ##### Rolling out changes gradually
   - Deployment with incremental changes
@@ -105,14 +106,6 @@ SLI = good events / valid events
 - Higher signal to noise ratio as they tend to give conflicting signals
 - Aggregate similar user journeys to keep the number of SLIs down
 
-```
-Although 100% availability is impossible, near-100% availability is often readily achievable, 
-and the industry commonly expresses high-availability values in terms of the number of "nines" 
-in the availability percentage. 
-For example, 
-availabilities of 99% and 99.999% can be referred to as "2 nines" and "5 nines" availability, respectively, 
-and the current published target for Google Compute Engine availability is “three and a half nines”—99.95% availability.
-```
 #### SLO
 An SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI.
 They are a fundamental tool in helping your organization strike a good balance between releasing new features and staying reliable for your users. 
