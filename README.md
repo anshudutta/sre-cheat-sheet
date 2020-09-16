@@ -78,6 +78,7 @@ Examples
 
 Characteristics of good SLI?
 - Must have a predictable liner realationship with user happiness (Less variance)
+  ![alt text](Screen Shot 2020-09-16 at 4.15.42 pm.png)
 ```
 |                                   |
 |------|           |----            |~~~~~~~      |--------
