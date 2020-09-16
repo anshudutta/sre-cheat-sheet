@@ -76,6 +76,19 @@ Examples
 - Storage systems - latency, availability, and durability
 - Big data systems - throughput and end-to-end latency
 
+Characteristics of good SLI?
+- Must have a predictable liner realationship with user happiness (Less variance)
+```
+|                                   |
+|------|           |----            |~~~~~~~      |--------
+|      |           |                |       $~~~~~~|
+|      |-----------|                |
+------------------------>           |------------------------> time
+GOOD                                 
+```
+- Shows service is working as users expect it to
+- Aggregated over a long time horizon
+
 ```
 Although 100% availability is impossible, near-100% availability is often readily achievable, 
 and the industry commonly expresses high-availability values in terms of the number of "nines" 
