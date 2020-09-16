@@ -4,9 +4,9 @@
 1. Reliability is the most important feature
 2. Users, not monitoring decide reliability
 3. Well-engineered (can go only to 3 9s)
- - software = 99.9%
- - operations = 99.99%
- - business = 99.999%
+    - software = 99.9%
+    - operations = 99.99%
+    - business = 99.999%
  
 ### Reliability
 Reliability is a measure of how well the service lives up to its expectations.
@@ -58,7 +58,7 @@ In real world, Reliability of a service is quantified by measuring few parmeters
 ### Measuring Reliability
 How is reliability measured?
 #### SLI
-An SLI is a service level indicator — a carefully defined quantitative measure of some aspect of the level of service that is provided.
+An SLI is a service level indicator — a carefully defined quantitative measure of user experience / reliability of service.
 Simply,
 ```
 SLI = good events / valid events
@@ -84,14 +84,17 @@ SLI = good events / valid events
 - Durability (Data will be retained over a period of time, measure of data loss)
 
 ##### Examples
-- Request-Response systems
-   - Availability - Proportion of valid requests served successfully
-   - Latency - Proportion of valid requests served faster than a threshold
-   - Quality - Proportion of valid requests served without degrading quality
-- Storage systems - latency, availability, and durability
-- Big data systems - throughput and end-to-end latency
-
-
+###### Request-Response systems
+ - Availability - Proportion of valid requests served successfully
+ - Latency - Proportion of valid requests served faster than a threshold
+ - Quality - Proportion of valid requests served without degrading quality
+###### Data-Processing Systems
+ - Freshness - Proportion of valid data updated more recently than a threshold
+                 i.e. is it serving stale data
+                 e.g. For a batch processing system its the time since last successful run
+ - Correctness - Porportion of valid data producing correct output
+ - Coverage - Proprotion of valid data processed successfully
+ - Thorughput - Proportion of time where the data processing rate is faster than threshold
 
 ```
 Although 100% availability is impossible, near-100% availability is often readily achievable, 
