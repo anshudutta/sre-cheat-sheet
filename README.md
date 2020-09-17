@@ -193,7 +193,7 @@ Else make sure change propagates gradually so not all parts of system
 are exposed to change at once giving time for human intervention)
 - 99.999% = 24 seconds (Restricting the rate of change so that only 1% of system changes at a given point in time)
 
-Example
+#### Example
 ---
 A 99.9% SLO service has a 0.1% error budget.
 
