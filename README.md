@@ -106,6 +106,8 @@ SLI = good events / valid events
 - Higher signal to noise ratio as they tend to give conflicting signals
 - Aggregate similar user journeys to keep the number of SLIs down
 
+Refer - https://docs.google.com/document/d/1VM1z7naMpNbb9vwWbMxQ1_GUVZu2mB9RsBe9SD9HQUA/edit
+
 #### SLO
 An SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI.
 They are a fundamental tool in helping your organization strike a good balance between releasing new features and staying reliable for your users. 
@@ -151,6 +153,12 @@ Simply put, if your service is performing exactly at its target SLOs, your avera
 If it were any less reliable, you'd no longer be meeting their expectations and they would become unhappy. 
 
 If your service meets target SLO, that means you have happy customers. If it misses the target SLO, that means you have sad customers. 
+
+##### SLO Gaps
+- 100% coverage for complex systems is unrealistic
+- Pay for rare failure modes from your error budget
+- Exclude factors from outside your control from SLI
+- Do a cost benefit analysis
 
 #### SLA
 Any company providing a service need to have Service Level Agreements, or SLAs. These are your agreements that you make with your customers about the reliability of your service. An SLA has to have consequences if it's violated, otherwise there's no point in making one. If your customers are paying for something and you violate an SLA, there needs to be consequences, such as giving your customers partial refunds or extra service credits.
