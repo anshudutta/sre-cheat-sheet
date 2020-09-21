@@ -222,3 +222,5 @@ If Service > Error Budget
  - Changes need to be stopped till the system is stable
  
 One simple approach is to keep releasing features till error budget is exhausted, then focussing development on reliability improvements untill the budget is refilled
+#### Error Budget Policy
+Describes how organisation decides to tradeoff Reliability vs Features when the SLO indicates that service is not reliable
