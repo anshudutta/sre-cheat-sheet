@@ -184,7 +184,6 @@ The error budget forms a control mechanism for diverting attention to stability 
 Error Budget = 1 - SLO
 ```
 #### Illustration
----
 28 day error budget
 - 99.9% = 40 min (Enough time for humans to react)
 - 99.99% = 4 minutes 
@@ -193,14 +192,15 @@ Else make sure change propagates gradually so not all parts of system
 are exposed to change at once giving time for human intervention)
 - 99.999% = 24 seconds (Restricting the rate of change so that only 1% of system changes at a given point in time)
 
-#### Example
----
+```
+Example
+
 A 99.9% SLO service has a 0.1% error budget.
 
 If the service receives 1,000,000 requests in four weeks, a 99.9% availability SLO gives us a budget of 1,000 errors over that period.
-```
+
 Downtime = 0.001*28*24*60 minutes = 40.32 minutes
-```
+
 This is just about enough time for 
 - your monitoring systems to surface an issue, 
 - a human to investigate and fix it. 
@@ -208,6 +208,7 @@ This is just about enough time for
 And that only allows for one incident per month
 
 This unavailability can be generated as a result of bad pushes by the product teams, planned maintenance, hardware failures,etc.
+```
 
 #### Benefits
 - Common incentives for Devs and ARE
