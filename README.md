@@ -106,8 +106,6 @@ SLI = good events / valid events
 - Higher signal to noise ratio as they tend to give conflicting signals
 - Aggregate similar user journeys to keep the number of SLIs down
 
-Refer - https://docs.google.com/document/d/1VM1z7naMpNbb9vwWbMxQ1_GUVZu2mB9RsBe9SD9HQUA/edit
-
 #### SLO
 An SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI.
 They are a fundamental tool in helping your organization strike a good balance between releasing new features and staying reliable for your users. 
@@ -253,5 +251,7 @@ Example
 • Threshold 2: SREs conclude they need help to defend SLO and escalate to devs 
 • Threshold 3: The 30-day error budget is exhausted and the root cause has not been found; feature releases blocked, dev team dedicates more resources 
 • Threshold 4: The 90-day error budget is exhausted and the root cause has not been found; SRE escalates to executive leadership to obtain more engineering time for reliability work 
-
 ```
+### Case Study
+
+Refer - https://docs.google.com/document/d/1VM1z7naMpNbb9vwWbMxQ1_GUVZu2mB9RsBe9SD9HQUA/edit
