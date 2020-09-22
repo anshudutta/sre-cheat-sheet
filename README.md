@@ -160,6 +160,9 @@ If your service meets target SLO, that means you have happy customers. If it mis
 - Exclude factors from outside your control from SLI
 - Do a cost benefit analysis
 
+##### SLO Dashboard
+![alt text](https://github.com/anshudutta/sre-cheat-sheet/blob/master/SLO%20Dashboard.png)
+
 #### SLA
 Any company providing a service need to have Service Level Agreements, or SLAs. These are your agreements that you make with your customers about the reliability of your service. An SLA has to have consequences if it's violated, otherwise there's no point in making one. If your customers are paying for something and you violate an SLA, there needs to be consequences, such as giving your customers partial refunds or extra service credits.
 
