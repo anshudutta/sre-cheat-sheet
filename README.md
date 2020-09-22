@@ -250,7 +250,8 @@ Example
 ```
 ### Case Study
 
-Refer 
+Refer
+
     - https://docs.google.com/document/d/1VM1z7naMpNbb9vwWbMxQ1_GUVZu2mB9RsBe9SD9HQUA/edit
     - https://docs.google.com/spreadsheets/d/1XTsPG79XCCiaOEMj8K4mgPg39ZWB1l5fzDc1aDjLW2Y/view#gid=847168250
 
