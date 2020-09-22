@@ -155,9 +155,9 @@ Example
     - 90% of requests complete in under 500ms over a 28 day window. 
     - Latency SLO: 50% of requests complete in under 200ms over a 28 day window. 
 
-Availability SLO
+- Availability SLO
 ![alt text](https://github.com/anshudutta/sre-cheat-sheet/blob/master/Server_error.png)
-    - 99.5% of responses are good over a period of 28 days
+    - 99.5% of responses are good over a period of 28 days.
     - 99.95% of responses are good over a period of 28 days
     
 ##### The happiness Test
