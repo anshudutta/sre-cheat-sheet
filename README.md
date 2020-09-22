@@ -1,22 +1,18 @@
 # SRE Cheat Sheet
 
-## Principles
-1. Reliability is the most important feature
-2. Users, not monitoring decide reliability
-3. Well-engineered (can go only to 3 9s)
-    - software = 99.9%
-    - operations = 99.99%
-    - business = 99.999%
- 
 ### Reliability
 Reliability is a measure of how well the service lives up to its expectations.
-
-Principles of reliability
   - What to promise and to whom?
   - What metrics to measure?
-  - How much reliability is good enough?
+  - How much reliability is good enough?    
   
-In real world, Reliability of a service is quantified by measuring few parmeters which are called `SLI`
+#### Principles
+1. Reliability is the most important feature
+2. Users, not monitoring decide reliability
+3. 100% is a wrong target in almost all cases
+    - To reach 99.9% you need a seasoned software engineering team
+    - To reach 99.99%, you need a well rained operations team with focus on automation
+    - To reach 99.999%, you need to sacrifice speed at which features are released
 
 #### NOTE: 
 1. 100% Reliability is a wrong target. If you are running your service more reliably than you need to, you may be slowing down development
@@ -254,4 +250,7 @@ Example
 ```
 ### Case Study
 
-Refer - https://docs.google.com/document/d/1VM1z7naMpNbb9vwWbMxQ1_GUVZu2mB9RsBe9SD9HQUA/edit
+Refer 
+    - https://docs.google.com/document/d/1VM1z7naMpNbb9vwWbMxQ1_GUVZu2mB9RsBe9SD9HQUA/edit
+    - https://docs.google.com/spreadsheets/d/1XTsPG79XCCiaOEMj8K4mgPg39ZWB1l5fzDc1aDjLW2Y/view#gid=847168250
+
