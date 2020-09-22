@@ -146,7 +146,20 @@ Example
 ##### SLO Targets
 1. Just high enough to keep customers happy
 2. Ambitious but achievable
- 
+
+Example
+- Latency SLO
+![alt text](https://github.com/anshudutta/sre-cheat-sheet/blob/master/Server_Latency.png)
+    - 99% of requests complete in under 1000ms over a 28 day window. 
+    - 95% of requests complete in under 750ms over a 28 day window. 
+    - 90% of requests complete in under 500ms over a 28 day window. 
+    - Latency SLO: 50% of requests complete in under 200ms over a 28 day window. 
+
+Availability SLO
+![alt text](https://github.com/anshudutta/sre-cheat-sheet/blob/master/Server_error.png)
+    - 99.5% of responses are good over a period of 28 days
+    - 99.95% of responses are good over a period of 28 days
+    
 ##### The happiness Test
 The test states that services need target SLOs that capture the performance and availability levels that if barely met would keep a typical customer happy. 
 Simply put, if your service is performing exactly at its target SLOs, your average user would be happy with that performance. 
