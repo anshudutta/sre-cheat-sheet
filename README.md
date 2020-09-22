@@ -224,3 +224,17 @@ If Service > Error Budget
 One simple approach is to keep releasing features till error budget is exhausted, then focussing development on reliability improvements untill the budget is refilled
 #### Error Budget Policy
 Describes how organisation decides to tradeoff Reliability vs Features when the SLO indicates that service is not reliable
+- Clearly describes how and when it should be applied
+- Consistently applied
+- Documents consequences of NOT applying
+- Documents thresholds for escalation - 
+    - after Xh hours of error budget burned
+    - paging developers after SLO is voilated
+```
+Example
+• Threshold 1: Automated alerts notify SRE of an at-risk SLO 
+• Threshold 2: SREs conclude they need help to defend SLO and escalate to devs 
+• Threshold 3: The 30-day error budget is exhausted and the root cause has not been found; feature releases blocked, dev team dedicates more resources 
+• Threshold 4: The 90-day error budget is exhausted and the root cause has not been found; SRE escalates to executive leadership to obtain more engineering time for reliability work 
+
+```
