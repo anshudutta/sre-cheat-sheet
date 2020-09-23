@@ -149,7 +149,7 @@ Example
     - 99% of requests complete in under 1000ms over a 28 day window. 
     - 95% of requests complete in under 750ms over a 28 day window. 
     - 90% of requests complete in under 500ms over a 28 day window. 
-    - Latency SLO: 50% of requests complete in under 200ms over a 28 day window. 
+    - 50% of requests complete in under 200ms over a 28 day window. 
 
 - Availability SLO
 ![alt text](https://github.com/anshudutta/sre-cheat-sheet/blob/master/Server_error.png)
