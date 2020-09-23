@@ -102,9 +102,9 @@ We see between 0.1 and 1 completed purchase every second; this spikes to 10 purc
 
 Valid Events - Requests of type https and from user agent - Browser or mobile client for path `/api/getSKUs` or `/api/completePurchase`
 
-- Availability - Proportion of requests for path `/api/getSKUs` or `/api/completePurchase` that are not in status code 500 measured at load balancer
-- Latency - Proportion of requests for paths `/api/getSKUs` or `/api/completePurchase` served within 3 seconds (lets say that this is based on historical data) measured at load balancer
-- Quality - Proportion of requests for path `/api/getSKUs` or `/api/completePurchase` served without degrading quality measured at client-side using synthetic client or client side instrumentation
+- Availability SLI - Proportion of requests for path `/api/getSKUs` or `/api/completePurchase` that are not in status code 500 measured at load balancer
+- Latency SLI - Proportion of requests for paths `/api/getSKUs` or `/api/completePurchase` served within 3 seconds (lets say that this is based on historical data) measured at load balancer
+- Quality SLI - Proportion of requests for path `/api/getSKUs` or `/api/completePurchase` served without degrading quality measured at client-side using synthetic client or client side instrumentation
 
 #### Managing complex systems
 - Start by thinking about user journeys
