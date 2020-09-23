@@ -48,10 +48,6 @@ NOTE:
  Issue       TTD             TTR
         Time-To-Detect   Time-To-Resolution
  ```
- Expected impact of a failure on error budget over a period of time
- ```
- E ~ (TTR+TTD) * impact % / TTF
- ```
 
 ## Measuring Reliability
 How is reliability measured?
@@ -267,6 +263,11 @@ Analyze if your error budget is realistic
 - Model error budget impact
 - Compare and assess risk
 - Prioritize fixing critical risk
+
+ Expected impact of a failure on error budget over a period of time
+ ```
+ E ~ (TTR+TTD) * impact % / TTF
+ ```
 
 Risk spreadsheet - https://docs.google.com/spreadsheets/d/1XTsPG79XCCiaOEMj8K4mgPg39ZWB1l5fzDc1aDjLW2Y/view#gid=847168250
 
