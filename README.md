@@ -82,7 +82,6 @@ SLI = good events / valid events
 - Availability = uptime / (uptime + downtime)
 - Durability (Data will be retained over a period of time, measure of data loss)
 
-#### Examples
 ##### Request-Response systems
  - Availability - Proportion of valid requests served successfully
  - Latency - Proportion of valid requests served faster than a threshold
@@ -94,6 +93,18 @@ SLI = good events / valid events
  - Correctness - Porportion of valid data producing correct output
  - Coverage - Proprotion of valid data processed successfully
  - Thorughput - Proportion of time where the data processing rate is faster than threshold
+ 
+#### Example
+In a fictional gaming application, users buying in-game currency via in-app purchases. Requests to the Play Store are only visible from the client. 
+We see between 0.1 and 1 completed purchase every second; this spikes to 10 purchases per second after the release of a new area as players try to meet its requirements.
+
+![alt text](https://github.com/anshudutta/sre-cheat-sheet/blob/master/SLI_Example.png)
+
+Valid Events - Requests of type https and from user agent - Browser or mobile client for path `/api/getSKUs` or `/api/completePurchase`
+
+- Availability - Proportion of requests for path `/api/getSKUs` or `/api/completePurchase` that are not in status code 500 measured at load balancer
+- Latency - Proportion of requests for paths `/api/getSKUs` or `/api/completePurchase` served within 3 seconds (lets say that this is based on historical data) measured at load balancer
+- Quality - Proportion of requests for path `/api/getSKUs` or `/api/completePurchase` served without degrading quality measured at client-side using synthetic client or client side instrumentation
 
 #### Managing complex systems
 - Start by thinking about user journeys
