@@ -1,44 +1,45 @@
 # SRE Cheat Sheet
 
-### Reliability
+## Reliability
 Reliability is a measure of how well the service lives up to its expectations.
   - What to promise and to whom?
   - What metrics to measure?
   - How much reliability is good enough?    
   
-#### Principles
+### Principles
 1. Reliability is the most important feature
 2. Users, not monitoring decide reliability
 3. 100% is a wrong target in almost all cases
     - To reach 99.9% you need a seasoned software engineering team
-    - To reach 99.99%, you need a well rained operations team with focus on automation
+    - To reach 99.99%, you need a well trained operations team with focus on automation
     - To reach 99.999%, you need to sacrifice speed at which features are released
-
-#### NOTE: 
+```
+NOTE: 
 1. 100% Reliability is a wrong target. If you are running your service more reliably than you need to, you may be slowing down development
 2. Its more expensive to make already reliable services more reliable. At some point the incremental cost of making a service reliable increases exponentially
 3. Have ambitions but achievable targets based on how it performs and agreed by all stakeholders
 4. Taking reliaility to extreme measures is unproductiove and costly. It should be "Reliable Enough"
+```
 
-#### How to make services reliable?
-##### Rolling out changes gradually
+### How to make services reliable?
+#### Rolling out changes gradually
   - Deployment with incremental changes
   - Feature toggles
   - Canary deployments with easy rollback that affect only a smaller percent of users initially
-##### Remove single point of failure
+#### Remove single point of failure
   - Multi AZ deployments
   - Set up DR in a geographically isolated region
-##### Reduce TTD (Time-To-Detect)
+#### Reduce TTD (Time-To-Detect)
   - Catch issues faster by automated alert and monitoring 
   - Monitor SLO compliance and error budget burnout
-##### Reduce TTR (Time-To-Resolution)
+#### Reduce TTR (Time-To-Resolution)
   - Fix outgages quicker
   - Knowledge sharing via playbooks
   - Automating outage mitigation steps, such as draining from one region to another.
-##### Increase TTF / TBF - Expected frequency of failure to 
+#### Increase TTF / TBF - Expected frequency of failure to 
   - Make services Fault tolerant by running them on multiple AZs
   - Automate manual mitigation steps
-##### Inprove Operation Efficiency
+#### Inprove Operation Efficiency
   - Post mortems of outages
   - Standardized Infrastructure 
   - Collect data on poor reliability regions and make extra effort to make those reliable
@@ -52,40 +53,40 @@ Reliability is a measure of how well the service lives up to its expectations.
  E ~ (TTR+TTD) * impact % / TTF
  ```
 
-### Measuring Reliability
+## Measuring Reliability
 How is reliability measured?
-#### SLI
+### SLI
 An SLI is a service level indicator — a carefully defined quantitative measure of user experience / reliability of service.
 Simply,
 ```
 SLI = good events / valid events
 ```
-##### Characteristics of good SLI
+#### Characteristics of good SLI
 - Must have a predictable liner realationship with user happiness (Less variance) 
 ![alt text](https://github.com/anshudutta/sre-cheat-sheet/blob/master/SLI-Metric.png)
 - Shows service is working as users expect it to
 - Aggregated over a long time horizon
 
-##### Ways of measuring SLI
+#### Ways of measuring SLI
 - Requst Logs
 - Exporting metrics
 - Front-end load balancer metrics
 - Synthetic clients
 - Client side instrumentation
 
-##### Types of SLI
+#### Types of SLI
 - Request Latency
 - Error Rate = (500 responses/total requestes) per second
 - Time between Failures - Frequency of error occurring over a period of time
 - Availability = uptime / (uptime + downtime)
 - Durability (Data will be retained over a period of time, measure of data loss)
 
-##### Examples
-###### Request-Response systems
+#### Examples
+##### Request-Response systems
  - Availability - Proportion of valid requests served successfully
  - Latency - Proportion of valid requests served faster than a threshold
  - Quality - Proportion of valid requests served without degrading quality
-###### Data-Processing Systems
+##### Data-Processing Systems
  - Freshness - Proportion of valid data updated more recently than a threshold
                  i.e. is it serving stale data
                  e.g. For a batch processing system its the time since last successful run
@@ -93,7 +94,7 @@ SLI = good events / valid events
  - Coverage - Proprotion of valid data processed successfully
  - Thorughput - Proportion of time where the data processing rate is faster than threshold
 
-##### Managing complex systems
+#### Managing complex systems
 - Start by thinking about user journeys
 - SLI and metrics are different. SLI ---> Something is broken, Metric ---> What is broken
 - Keep the number of SLIs down to 1-3 per user journey
@@ -102,12 +103,12 @@ SLI = good events / valid events
 - Higher signal to noise ratio as they tend to give conflicting signals
 - Aggregate similar user journeys to keep the number of SLIs down
 
-#### SLO
+### SLO
 An SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI.
 They are a fundamental tool in helping your organization strike a good balance between releasing new features and staying reliable for your users. 
 They also help your teams communicate on the expectations of a service through objective data.
 
-##### Questions that SLO help answer:
+#### Questions that SLO help answer:
 - If reliability is a feature, when do you prioritize it versus other features?
 - How fast is too tast for rolling out features?
 - What is the right level of reliability for your system?
@@ -116,11 +117,11 @@ A service level objective usually defines a target level for SLI so that one can
 ```
 lower bound ≤ SLI ≤ upper bound --> for a defined period of time
 ```
-##### An SLO
+#### An SLO
 - Should be stronger than your SLA to catch issues before they violate customer expectations
 - Is an internal promises to meet customer expectations
 
-##### NOTE:
+#### NOTE:
 1. Defining `SLO` is an iterative process, needs to be reviewd periodically based on changing business needs and customers
 ```
 |-----------|-----------------|
@@ -137,7 +138,7 @@ Example
     - Constant rate of 0.5% errors
 3. Not all users care about latency the same way. Bots may require lower latency than humans. So its resonable to have different SLOs based on different users
 ```
-##### SLO Targets
+#### SLO Targets
 1. Just high enough to keep customers happy
 2. Ambitious but achievable
 
@@ -154,23 +155,23 @@ Example
     - 99.5% of responses are good over a period of 28 days.
     - 99.95% of responses are good over a period of 28 days
     
-##### The happiness Test
+#### The happiness Test
 The test states that services need target SLOs that capture the performance and availability levels that if barely met would keep a typical customer happy. 
 Simply put, if your service is performing exactly at its target SLOs, your average user would be happy with that performance. 
 If it were any less reliable, you'd no longer be meeting their expectations and they would become unhappy. 
 
 If your service meets target SLO, that means you have happy customers. If it misses the target SLO, that means you have sad customers. 
 
-##### SLO Gaps
+#### SLO Gaps
 - 100% coverage for complex systems is unrealistic
 - Pay for rare failure modes from your error budget
 - Exclude factors from outside your control from SLI
 - Do a cost benefit analysis
 
-##### SLO Dashboard
+#### SLO Dashboard
 ![alt text](https://github.com/anshudutta/sre-cheat-sheet/blob/master/SLO%20Dashboard.png)
 
-#### SLA
+### SLA
 Any company providing a service need to have Service Level Agreements, or SLAs. These are your agreements that you make with your customers about the reliability of your service. An SLA has to have consequences if it's violated, otherwise there's no point in making one. If your customers are paying for something and you violate an SLA, there needs to be consequences, such as giving your customers partial refunds or extra service credits.
 
 if you are only alerted of issues after they violated your SLA, that could be a very costly service to run. Therefore, it is in your best interest to catch an issue before it breaches your SLA so that you have time to fix it. These thresholds are your SLOs, service level objectives. They should always be stronger than your SLAs because customers are usually impacted before the SLA is actually breached. And violating SLAs requires costly compensation. 
@@ -183,7 +184,7 @@ An SLA
 - Must have consequences if violated
 - Is an agreement with your customer about reliability of your service
 
-### Error budget
+## Error budget
 Error budget is a measure of service unreliability that is allowed without breaking SLOs or how much down time is allowed before you have unhappy customers
 Error budget hepls you figure out how room we have for mistakes that can make service unreliable.
 
@@ -193,7 +194,7 @@ The error budget forms a control mechanism for diverting attention to stability 
 ```
 Error Budget = 1 - SLO
 ```
-#### Illustration
+### Illustration
 28 day error budget
 - 99.9% = 40 min (Enough time for humans to react)
 - 99.99% = 4 minutes 
@@ -220,7 +221,7 @@ And that only allows for one incident per month
 This unavailability can be generated as a result of bad pushes by the product teams, planned maintenance, hardware failures,etc.
 ```
 
-#### Benefits
+### Benefits
 - Common incentives for Devs and ARE
 - Dev team can self manage risk
 - Unrealistic goals become unattractive
@@ -233,7 +234,7 @@ If Service > Error Budget
  - Changes need to be stopped till the system is stable
  
 One simple approach is to keep releasing features till error budget is exhausted, then focussing development on reliability improvements untill the budget is refilled
-#### Error Budget Policy
+### Error Budget Policy
 Describes how organisation decides to tradeoff Reliability vs Features when the SLO indicates that service is not reliable
 - Clearly describes how and when it should be applied
 - Consistently applied
@@ -248,7 +249,7 @@ Example
 • Threshold 3: The 30-day error budget is exhausted and the root cause has not been found; feature releases blocked, dev team dedicates more resources 
 • Threshold 4: The 90-day error budget is exhausted and the root cause has not been found; SRE escalates to executive leadership to obtain more engineering time for reliability work 
 ```
-### Case Study
+## Case Study
 
 Refer
 
