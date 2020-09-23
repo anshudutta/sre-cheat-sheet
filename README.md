@@ -261,10 +261,14 @@ Example
 • Threshold 3: The 30-day error budget is exhausted and the root cause has not been found; feature releases blocked, dev team dedicates more resources 
 • Threshold 4: The 90-day error budget is exhausted and the root cause has not been found; SRE escalates to executive leadership to obtain more engineering time for reliability work 
 ```
+## Reliability Risks
+Analyze if your error budget is realistic
+- Be Constructively pessimistic
+- Model error budget impact
+- Compare and assess risk
+- Prioritize fixing critical risk
+Risk spreadsheet - https://docs.google.com/spreadsheets/d/1XTsPG79XCCiaOEMj8K4mgPg39ZWB1l5fzDc1aDjLW2Y/view#gid=847168250
+
 ## Case Study
-
-Refer
-
-    - https://docs.google.com/document/d/1VM1z7naMpNbb9vwWbMxQ1_GUVZu2mB9RsBe9SD9HQUA/edit
-    - https://docs.google.com/spreadsheets/d/1XTsPG79XCCiaOEMj8K4mgPg39ZWB1l5fzDc1aDjLW2Y/view#gid=847168250
+https://docs.google.com/document/d/1VM1z7naMpNbb9vwWbMxQ1_GUVZu2mB9RsBe9SD9HQUA
 
