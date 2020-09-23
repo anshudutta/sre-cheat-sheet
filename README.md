@@ -57,6 +57,7 @@ NOTE:
 How is reliability measured?
 ### SLI
 An SLI is a service level indicator — a carefully defined quantitative measure of user experience / reliability of service.
+
 Simply,
 ```
 SLI = good events / valid events
