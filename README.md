@@ -18,7 +18,7 @@ NOTE:
 1. 100% Reliability is a wrong target. If you are running your service more reliably than you need to, you may be slowing down development
 2. Its more expensive to make already reliable services more reliable. At some point the incremental cost of making a service reliable increases exponentially
 3. Have ambitions but achievable targets based on how it performs and agreed by all stakeholders
-4. Taking reliaility to extreme measures is unproductiove and costly. It should be "Reliable Enough"
+4. Taking reliability to extreme measures is unproductive and costly. It should be "Reliable Enough"
 ```
 
 ### How to make services reliable?
@@ -59,13 +59,13 @@ Simply,
 SLI = good events / valid events
 ```
 #### Characteristics of good SLI
-- Must have a predictable liner realationship with user happiness (Less variance) 
+- Must have a predictable liner relationship with user happiness (Less variance) 
 ![alt text](https://github.com/anshudutta/sre-cheat-sheet/blob/master/SLI-Metric.png)
 - Shows service is working as users expect it to
 - Aggregated over a long time horizon
 
 #### Ways of measuring SLI
-- Requst Logs
+- Request Logs
 - Exporting metrics
 - Front-end load balancer metrics
 - Synthetic clients
@@ -87,8 +87,8 @@ SLI = good events / valid events
                  i.e. is it serving stale data
                  e.g. For a batch processing system its the time since last successful run
  - Correctness - Porportion of valid data producing correct output
- - Coverage - Proprotion of valid data processed successfully
- - Thorughput - Proportion of time where the data processing rate is faster than threshold
+ - Coverage - Proportion of valid data processed successfully
+ - Thourghput - Proportion of time where the data processing rate is faster than threshold
  
 #### Example
 In a fictional gaming application, users buying in-game currency via in-app purchases. Requests to the Play Store are only visible from the client. 
@@ -130,7 +130,7 @@ lower bound ≤ SLI ≤ upper bound --> for a defined period of time
 - Is an internal promises to meet customer expectations
 
 #### NOTE:
-1. Defining `SLO` is an iterative process, needs to be reviewd periodically based on changing business needs and customers
+1. Defining `SLO` is an iterative process, needs to be reviewed periodically based on changing business needs and customers
 ```
 |-----------|-----------------|
 Initial   Follow up          Periodic
@@ -140,7 +140,7 @@ Not everything is linear, there are many edge cases in different organizations t
 ```
 Example
 1. Companies might shift from 3 9s to 4 9s during black friday shopping frenzy to cater to high demands
-2. Outage duration can impact customer happiness. The follwing may affect different customers differently
+2. Outage duration can impact customer happiness. The following may affect different customers differently
     - A single 4 hour outage
     - Four 1 hour outages
     - Constant rate of 0.5% errors
@@ -230,11 +230,11 @@ This unavailability can be generated as a result of bad pushes by the product te
 ```
 
 ### Benefits
-- Common incentives for Devs and ARE
+- Common incentives for Devs and SRE
 - Dev team can self manage risk
 - Unrealistic goals become unattractive
 
-If Servive < Error Budget
+If Service < Error Budget
  - Dev can push changes more frequently
  - SRE can proactively work on increasing reliability
  
@@ -249,7 +249,7 @@ Describes how organisation decides to tradeoff Reliability vs Features when the 
 - Documents consequences of NOT applying
 - Documents thresholds for escalation - 
     - after Xh hours of error budget burned
-    - paging developers after SLO is voilated
+    - paging developers after SLO is violated
 ```
 Example
 • Threshold 1: Automated alerts notify SRE of an at-risk SLO 
